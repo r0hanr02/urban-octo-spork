@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="search-section">
+      <h2>GitHub Details</h2>
+      <label for="github-username">GitHub Username</label>
+      <input id="input" type="text" placeholder="Enter GitHub username" />
+      <button onclick="SearchUser()">Search</button>
+    </div>
+
+    <div class="details-section">
+      <img id="img" src="https://via.placeholder.com/100" alt="Profile Placeholder" />
+      <h3 id="name">Name</h3>
+      <h3 id="username">Username</h3>
+      <h3 id="bio">Bio</h3>
+      
+      <h4 id="githubLink"><a href="#" target="_blank">GitHub Profile</a></h4>
+
+      <div class="info">
+        <label for="">Followers:</label>
+        <span id="following">0</span>
+      </div>
+
+      <div class="info">
+        <label for="">Repositories:</label>
+        <span id="Repo">0</span>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

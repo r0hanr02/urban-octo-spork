@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container Styling */
+  .container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Search Section Styling */
+  .search-section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input {
+    width: calc(100% - 10px);
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Details Section Styling */
+  .details-section {
+    text-align: center;
+  }
+  
+  #img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+    object-fit: cover;
+    border: 2px solid #007bff;
+  }
+  
+  h3, h4 {
+    margin: 10px 0;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  #githubLink a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #githubLink a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .info {
+    margin: 10px 0;
+  }
+  
+  label {
+    font-weight: normal;
+    margin-right: 5px;
+    color: #555;
+  }
+  
+  span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    input {
+      padding: 6px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  
+    #img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    h3, h4 {
+      font-size: 14px;
+    }
+  }
+  
