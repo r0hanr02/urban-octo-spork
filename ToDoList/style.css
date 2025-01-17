@@ -1,0 +1,111 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d2e0ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    margin-top: 10%;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(238, 234, 234);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px 5px black;
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+#btn{
+    padding: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    color: Black;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+}
+span{
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+.result{
+    width: 100%;
+    display: flex;
+    
+}
+.result div{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    box-shadow: 2px 2px 0px 0.1px black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor:grab;
+}
+.result div:hover{
+
+    background-color: rgb(247, 122, 122);
+    margin: 10px;
+    box-shadow: 2px 2px 0px 0.1px black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor:grab;
+}
+.result div button{
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.result div button:hover{
+    background-color: whitesmoke;
+    transition: .2s;
+    color: Black;
+}
+#leftBox{
+    width: 100%;
+    height: 100%;
+    background-color:blanchedalmond;
+    margin:10px;
+    border:2px dotted red;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+#rightBox{
+    width: 100%;
+    height: 100%;
+    background-color:blanchedalmond;
+    margin:10px;
+    border:2px dotted red;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
