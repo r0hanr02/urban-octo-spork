@@ -3,26 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Task Manager</title>
+    <style>
+        .Lists {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .remove-btn {
+            margin-left: 10px;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="main">
-            <h1>ToDoList</h1>
-            <input type="text" placeholder="Enter Text" id="input">
-            <button id="btn">Submit</button>
-        </div>
-        <h2>Your Items Here</h2>
-        <div class="result">
-            <div class="left" id="leftBox">
-                <h2>Todays Task</hw>
-            </div>
-            <div class="Right" id="rightBox">
-                <h2>Tomorrow</h2>
-            </div>
-        </div>
-    </div>
+    <input type="text" id="input" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+    <div class="result"></div>
+
+    <script>
+        // Load tasks from localStorage
+        function loadTasks() {
+            const result = document.querySelector(".result");
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+            tasks.forEach((task) => {
+                createTaskElement(task);
+            });
+        }
+
+        // Add a new task
+        function addTask() {
+            let input = document.querySelector("#input").value.trim();
+            const result = document.querySelector(".result");
+
+            if (input === "") {
+                alert("Enter a valid task");
+            } else {
+                const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                tasks.push(input);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                createTaskElement(input);
+            }
+            document.querySelector("#input").value = "";
+        }
+
+        // Create a task element
+        function createTaskElement(task) {
+            const result = document.querySelector(".result");
+            const div = document.createElement("div");
+            div.className = "Lists";
+
+            div.innerHTML = `
+                <span>${task}</span>
+                <span class="remove-btn" onclick="removeTask(this)">Remove</span>
+            `;
+            result.appendChild(div);
+        }
+
+        // Remove a task
+        function removeTask(button) {
+            const taskElement = button.parentElement;
+            const taskText = taskElement.querySelector("span").innerText;
+            taskElement.remove();
+
+            // Update localStorage
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+            const updatedTasks = tasks.filter((task) => task !== taskText);
+            localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+        }
+
+        // Initialize
+        window.onload = loadTasks;
+    </script>
 </body>
-<script src="script.js"></script>
 </html>

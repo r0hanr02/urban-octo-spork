@@ -1,0 +1,121 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Main container styling */
+  .main-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+  }
+  
+  /* Input fields styling */
+  .result input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Result display */
+  .resultDiv {
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 40px;
+  }
+  
+  /* Operator buttons styling */
+  .operator button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .operator button:hover {
+    background-color: #0056b3;
+  }
+  
+  .operator button:active {
+    background-color: #004494;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .result input[type="number"] {
+      font-size: 14px;
+    }
+  
+    .operator button {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  
+    .resultDiv {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 18px;
+    }
+  
+    .operator button {
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+  
+    .result input[type="number"] {
+      font-size: 12px;
+    }
+  
+    .resultDiv {
+      font-size: 14px;
+    }
+  }
+  
