@@ -1,0 +1,30 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: chartreuse;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 250px;
+  border: 2px dashed #333;
+  padding: 10px;
+  background-color: aliceblue;
+}
+
+.list {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: cornflowerblue;
+  cursor: grab;
+  text-align: center;
+}
